@@ -4,6 +4,8 @@ public class Chatbot {
     private final String LINE = "\n____________________________________________________________\n";
     private final Scanner in = new Scanner(System.in);
     private String command;
+    private String tasks[] = new String[100];
+    private int numTasks = 0;
 
     private void printGreeting() {
         String logo = "  __  __ _                            \n" +
@@ -25,8 +27,22 @@ public class Chatbot {
         return command.equalsIgnoreCase("bye");
     }
 
-    private void echo() {
-        System.out.println(LINE + command + LINE);
+    private boolean isListCommand() {
+        return command.equalsIgnoreCase("list");
+    }
+
+    private void displayList() {
+        System.out.print(LINE);
+        for(int i = 0; i < numTasks; i++) {
+            if (i!=0) System.out.print("\n");
+            System.out.print((i+1) + ". " + tasks[i]);
+        }
+        System.out.println(LINE);
+    }
+
+    private void addTask() {
+        tasks[numTasks++] = command;
+        System.out.println(LINE + "added: " + command + LINE);
     }
 
     private void assistUser() {
@@ -34,9 +50,13 @@ public class Chatbot {
             command = in.nextLine();
             if (isExitCommand())
                 return;
-            echo();
+            if (isListCommand())
+                displayList();
+            else
+                addTask();
         }
     }
+
     public void run() {
         printGreeting();
         assistUser();
