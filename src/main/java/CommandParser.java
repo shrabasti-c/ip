@@ -16,21 +16,22 @@ public class CommandParser {
     }
 
     public static void evaluateAndExecuteCommand(String command, TaskList tasks) {
-        if (isExitCommand(command))
+        if (isExitCommand(command)) {
             return;
-        if (isListCommand(command))
+        }
+
+        if (isListCommand(command)) {
             MessagePrinter.printTaskList(tasks.getTasks());
-        else if (isMarkedCommand(command)) {
-            String[] temp = command.split(" ", 2);
-            int currentTask = (temp.length < 2) ? -1 : (Integer.parseInt(temp[1]) - 1);
+        } else if (isMarkedCommand(command)) {
+            String[] commandArguments = command.split(" ", 2);
+            int currentTask = (commandArguments.length < 2) ? -1 : (Integer.parseInt(commandArguments[1]) - 1);
             tasks.markTask(currentTask);
-        }
-        else if (isUnmarkedCommand(command)) {
-            String[] temp = command.split(" ", 2);
-            int currentTask = (temp.length < 2) ? -1 : (Integer.parseInt(temp[1]) - 1);
+        } else if (isUnmarkedCommand(command)) {
+            String[] commandArguments = command.split(" ", 2);
+            int currentTask = (commandArguments.length < 2) ? -1 : (Integer.parseInt(commandArguments[1]) - 1);
             tasks.unmarkTask(currentTask);
-        }
-        else
+        } else {
             tasks.addTask(command);
+        }
     }
 }

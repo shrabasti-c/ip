@@ -1,4 +1,4 @@
-import java.util.*;
+import java.util.Scanner;
 public class Chatbot {
     private final Scanner in = new Scanner(System.in);
     private final TaskList tasks = new TaskList();
