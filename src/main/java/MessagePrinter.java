@@ -17,23 +17,25 @@ public class MessagePrinter {
         System.out.println(goodbye);
     }
 
-    public static void printAddedMessage(Task task) {
-        System.out.println(LINE + "added: " + task.getDescription() + LINE);
+    public static void printAddedMessage(Task task, int numTasks) {
+        System.out.println(LINE + "Understood: I have added this task");
+        System.out.println("\t\t" + task);
+        System.out.println("\tNumber of pending tasks in list: " + numTasks + LINE);
     }
 
     public static void printMarkedMessage(Task task) {
-        System.out.println(LINE + "\n\tCongratulations!\n\tmarked done: " + task.getDisplayStatus() + LINE);
+        System.out.println(LINE + "Congratulations!\n\tmarked done: " + task + LINE);
     }
 
     public static void printUnmarkedMessage(Task task) {
-        System.out.println(LINE + "\n\tTask pending...!\n\tmarked undone: " + task.getDisplayStatus() + LINE);
+        System.out.println(LINE + "Task pending...!\n\tmarked undone: " + task + LINE);
     }
 
     public static void printTaskList(Task[] tasks) {
         System.out.print(LINE);
         for(int i = 0; i < tasks.length; i++) {
             if (i!=0) System.out.print("\n\t");
-            System.out.print((i+1) + ". "+tasks[i].getDisplayStatus());
+            System.out.print((i+1) + ". "+tasks[i]);
         }
         System.out.println(LINE);
     }

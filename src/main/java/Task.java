@@ -15,7 +15,8 @@ public class Task {
         return description;
     }
 
-    public String getDisplayStatus() {
+    @Override
+    public String toString() {
         return "[" + getStatusIcon() + "] " + description;
     }
 

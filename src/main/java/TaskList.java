@@ -3,14 +3,13 @@ public class TaskList {
     private final Task[] tasks = new Task[100];
     private int numTasks = 0;
 
-    public void addTask(String command) {
+    public void addTask(Task t) {
         if (numTasks >= 100) {
             MessagePrinter.printError("Cannot add more tasks.");
             return;
         }
-        Task t = new Task(command);
         tasks[numTasks++] = t;
-        MessagePrinter.printAddedMessage(t);
+        MessagePrinter.printAddedMessage(t, numTasks);
     }
 
     public void markTask(int currentTask) {
