@@ -1,19 +1,21 @@
-import java.util.Scanner;
 public class Chatbot {
-    private final Scanner in = new Scanner(System.in);
-    private final TaskList tasks = new TaskList();
+    private final Ui ui = new Ui();
+    private final TaskList tasks = new TaskList(ui);
+    Parser commandParser = new Parser(ui);
 
     private void assistUser() {
-        String command;
+        String input;
+        boolean isExitCommand = false;
         do {
-            command = in.nextLine().trim();
-            CommandParser.evaluateAndExecuteCommand(command, tasks);
-        } while (!CommandParser.isExitCommand(command));
+            input = ui.readCommand();
+            Command command = commandParser.parseCommand(input);
+            command.execute(tasks, ui);
+            isExitCommand = command.isExitCommand();
+        } while (!isExitCommand);
     }
 
     public void run() {
-        MessagePrinter.printGreeting();
+        ui.printGreeting();
         assistUser();
-        MessagePrinter.printGoodbye();
     }
 }
