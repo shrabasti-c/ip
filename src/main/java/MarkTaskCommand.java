@@ -7,7 +7,7 @@ public class MarkTaskCommand extends Command {
     }
 
     @Override
-    public void execute(TaskList tasks, Ui ui) {
+    public void execute(TaskList tasks, Ui ui) throws MinervaException {
         tasks.markTask(currentTask);
     }
 }

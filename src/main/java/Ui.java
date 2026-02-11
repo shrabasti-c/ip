@@ -19,7 +19,7 @@ public class Ui {
     private static final String MESSAGE_PENDING_TASKS = "\n\tNumber of pending tasks in list: ";
     private static final String MESSAGE_MARKED = "Congratulations!\n\tmarked done: ";
     private static final String MESSAGE_UNMARKED = "Task pending...!\n\tmarked undone: ";
-    private static final String MESSAGE_ERROR =  "\n\tError: ";
+    private static final String MESSAGE_ERROR =  "\n\tYou err in your ways! ";
 
     public Ui() {
         this.in = new Scanner(System.in);

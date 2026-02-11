@@ -9,5 +9,5 @@ public abstract class Command {
         return this.type == CommandType.EXIT;
     }
 
-    public abstract void execute(TaskList tasks, Ui ui);
+    public abstract void execute(TaskList tasks, Ui ui) throws MinervaException;
 }
