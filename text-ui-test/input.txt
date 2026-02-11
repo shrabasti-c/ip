@@ -7,4 +7,14 @@ mark 2
 unmark 2
 mark 5
 unmark 5
+random
+mark xyz
+unmark xyz
+mark
+unmark
+todo
+deadline
+event
+deadline 3
+event 4
 bye
