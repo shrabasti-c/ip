@@ -1,16 +1,20 @@
 public class Chatbot {
     private final Ui ui = new Ui();
     private final TaskList tasks = new TaskList(ui);
-    Parser commandParser = new Parser(ui);
+    private final Parser commandParser = new Parser();
 
     private void assistUser() {
         String input;
         boolean isExitCommand = false;
         do {
             input = ui.readCommand();
-            Command command = commandParser.parseCommand(input);
-            command.execute(tasks, ui);
-            isExitCommand = command.isExitCommand();
+            try {
+                Command command = commandParser.parseCommand(input);
+                command.execute(tasks, ui);
+                isExitCommand = command.isExitCommand();
+            } catch (MinervaException e) {
+                ui.printError(e.getMessage());
+            }
         } while (!isExitCommand);
     }
 

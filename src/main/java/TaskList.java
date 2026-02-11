@@ -1,36 +1,37 @@
 import java.util.Arrays;
 public class TaskList {
+    private final Ui ui;
+
     public static final int MAX_TASKS = 100;
     private final Task[] tasks = new Task[MAX_TASKS];
     private int numTasks = 0;
-    private final Ui ui;
+
+    public static final String ERROR_OVERFLOW = "Cannot add more tasks.";
+    public static final String ERROR_NONEXISTENT_TASK = "Perform action on existing task only.";
 
     public TaskList(Ui ui) {
         this.ui = ui;
     }
 
-    public void addTask(Task t) {
+    public void addTask(Task t) throws MinervaException{
         if (numTasks >= MAX_TASKS) {
-            ui.printError("Cannot add more tasks.");
-            return;
+            throw new MinervaException(ERROR_OVERFLOW);
         }
         tasks[numTasks++] = t;
         ui.printAddedMessage(t, numTasks);
     }
 
-    public void markTask(int currentTask) {
+    public void markTask(int currentTask) throws MinervaException{
         if (currentTask < 0 || currentTask >= numTasks) {
-            ui.printError("This task does not exist!");
-            return;
+            throw new MinervaException(ERROR_NONEXISTENT_TASK);
         }
         tasks[currentTask].markDone();
         ui.printMarkedMessage(tasks[currentTask]);
     }
 
-    public void unmarkTask(int currentTask) {
+    public void unmarkTask(int currentTask) throws MinervaException {
         if (currentTask < 0 || currentTask >= numTasks) {
-            ui.printError("This task does not exist!");
-            return;
+            throw new MinervaException(ERROR_NONEXISTENT_TASK);
         }
         tasks[currentTask].unmarkDone();
         ui.printUnmarkedMessage(tasks[currentTask]);
