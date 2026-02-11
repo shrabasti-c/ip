@@ -1,4 +1,4 @@
-public class Command {
+public abstract class Command {
     protected final CommandType type;
 
     public Command(CommandType type) {
@@ -9,7 +9,5 @@ public class Command {
         return this.type == CommandType.EXIT;
     }
 
-    public void execute(TaskList tasks, Ui ui) {
-        return;
-    }
+    public abstract void execute(TaskList tasks, Ui ui);
 }

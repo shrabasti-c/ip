@@ -1,6 +1,7 @@
-import java.util.*;
+import java.util.Arrays;
 public class TaskList {
-    private final Task[] tasks = new Task[100];
+    public static final int MAX_TASKS = 100;
+    private final Task[] tasks = new Task[MAX_TASKS];
     private int numTasks = 0;
     private final Ui ui;
 
@@ -9,7 +10,7 @@ public class TaskList {
     }
 
     public void addTask(Task t) {
-        if (numTasks >= 100) {
+        if (numTasks >= MAX_TASKS) {
             ui.printError("Cannot add more tasks.");
             return;
         }
