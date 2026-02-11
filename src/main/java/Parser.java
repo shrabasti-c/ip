@@ -17,7 +17,7 @@ public class Parser {
 
     public static final String ERROR_INVALID_INPUT = "I do not recognize this task.";
     public static final String ERROR_INVALID_INPUT_DEADLINE = "The Deadline task must be entered correctly.";
-    public static final String ERROR_INVALID_INPUT_EVENT = "The Deadline task must be entered correctly.";
+    public static final String ERROR_INVALID_INPUT_EVENT = "The Event task must be entered correctly.";
     public static final String ERROR_INCOMPLETE_INPUT = "You must follow a task with a description.";
     public static final String ERROR_INCORRECT_INDEX_FORMAT = "You must specify the task number.";
 
