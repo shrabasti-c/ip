@@ -1,3 +1,10 @@
+package minerva.command;
+
+import minerva.data.exception.MinervaException;
+import minerva.task.Task;
+import minerva.task.TaskList;
+import minerva.ui.Ui;
+
 public class AddTaskCommand extends Command {
     protected final Task task;
 

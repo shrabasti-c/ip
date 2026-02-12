@@ -1,3 +1,11 @@
+package minerva.data.chatbot;
+
+import minerva.command.Command;
+import minerva.data.exception.MinervaException;
+import minerva.parser.Parser;
+import minerva.task.TaskList;
+import minerva.ui.Ui;
+
 public class Chatbot {
     private final Ui ui = new Ui();
     private final TaskList tasks = new TaskList(ui);

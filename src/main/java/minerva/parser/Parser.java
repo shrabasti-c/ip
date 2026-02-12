@@ -1,3 +1,12 @@
+package minerva.parser;
+
+import minerva.data.exception.MinervaException;
+import minerva.command.*;
+import minerva.task.Deadline;
+import minerva.task.Event;
+import minerva.task.Task;
+import minerva.task.Todo;
+
 public class Parser {
     private static final String BYE = "bye";
     private static final String LIST = "list";

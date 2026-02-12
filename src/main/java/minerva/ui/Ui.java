@@ -1,3 +1,7 @@
+package minerva.ui;
+
+import minerva.task.Task;
+
 import java.util.Scanner;
 
 public class Ui {

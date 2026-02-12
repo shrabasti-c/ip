@@ -1,3 +1,8 @@
+package minerva.task;
+
+import minerva.data.exception.MinervaException;
+import minerva.ui.Ui;
+
 import java.util.Arrays;
 public class TaskList {
     private final Ui ui;
@@ -13,7 +18,7 @@ public class TaskList {
         this.ui = ui;
     }
 
-    public void addTask(Task t) throws MinervaException{
+    public void addTask(Task t) throws MinervaException {
         if (numTasks >= MAX_TASKS) {
             throw new MinervaException(ERROR_OVERFLOW);
         }
