@@ -1,3 +1,9 @@
+package minerva.command;
+
+import minerva.data.exception.MinervaException;
+import minerva.task.TaskList;
+import minerva.ui.Ui;
+
 public class UnmarkTaskCommand extends Command {
     protected final int currentTask;
 
