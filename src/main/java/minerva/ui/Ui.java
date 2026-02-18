@@ -3,7 +3,7 @@ package minerva.ui;
 import minerva.task.Task;
 
 import java.util.Scanner;
-
+import java.util.ArrayList;
 public class Ui {
     private final Scanner in;
 
@@ -20,6 +20,7 @@ public class Ui {
     private static final String GOODBYE = "Farewell, until our paths cross again!";
 
     private static final String MESSAGE_ADDED = "Understood: I have added this task\n\t\t";
+    private static final String MESSAGE_DELETED = "Your folly is undone: I have deleted this task\n\t\t";
     private static final String MESSAGE_PENDING_TASKS = "\n\tNumber of pending tasks in list: ";
     private static final String MESSAGE_MARKED = "Congratulations!\n\tmarked done: ";
     private static final String MESSAGE_UNMARKED = "Task pending...!\n\tmarked undone: ";
@@ -45,6 +46,10 @@ public class Ui {
         printWithFormatting(MESSAGE_ADDED + task + MESSAGE_PENDING_TASKS + numTasks);
     }
 
+    public void printDeletedMessage(Task task, int numTasks) {
+        printWithFormatting(MESSAGE_DELETED + task + MESSAGE_PENDING_TASKS + numTasks);
+    }
+
     public void printMarkedMessage(Task task) {
         printWithFormatting(MESSAGE_MARKED + task);
     }
@@ -53,10 +58,10 @@ public class Ui {
         printWithFormatting(MESSAGE_UNMARKED + task);
     }
 
-    public void printTaskList(Task[] tasks) {
+    public void printTaskList(ArrayList<Task> tasks) {
         StringBuilder taskList = new StringBuilder();
-        for(int i = 0; i < tasks.length; i++) {
-            taskList.append("\t").append(i+1).append(". ").append(tasks[i]).append("\n");
+        for(int i = 0; i < tasks.size(); i++) {
+            taskList.append("\t").append(i+1).append(". ").append(tasks.get(i)).append("\n");
         }
         printWithFormatting(String.valueOf(taskList).trim());
     }

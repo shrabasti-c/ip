@@ -15,6 +15,7 @@ public class Parser {
     private static final String TODO = "todo";
     private static final String EVENT = "event";
     private static final String DEADLINE = "deadline";
+    private static final String DELETE = "delete";
 
     private static final char SEPARATOR = '/';
     private static final int TODO_START = 5;
@@ -47,9 +48,16 @@ public class Parser {
             return parseDeadlineCommand(command);
         } else if (command.startsWith(EVENT)) {
             return parseEventCommand(command);
+        } else if (command.startsWith(DELETE)) {
+            return deleteTaskCommand(command);
         } else {
             throw new MinervaException(ERROR_INVALID_INPUT);
         }
+    }
+
+    public Command deleteTaskCommand(String command) throws MinervaException {
+        int currentTask = getCurrentTask(command);
+        return new DeleteTaskCommand(currentTask);
     }
 
     public Command parseMarkCommand(String command) throws MinervaException {

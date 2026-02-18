@@ -3,15 +3,11 @@ package minerva.task;
 import minerva.data.exception.MinervaException;
 import minerva.ui.Ui;
 
-import java.util.Arrays;
+import java.util.ArrayList;
 public class TaskList {
     private final Ui ui;
 
-    public static final int MAX_TASKS = 100;
-    private final Task[] tasks = new Task[MAX_TASKS];
-    private int numTasks = 0;
-
-    public static final String ERROR_OVERFLOW = "Cannot add more tasks.";
+    private final ArrayList<Task> tasks = new ArrayList<>();
     public static final String ERROR_NONEXISTENT_TASK = "Perform action on existing task only.";
 
     public TaskList(Ui ui) {
@@ -19,30 +15,35 @@ public class TaskList {
     }
 
     public void addTask(Task t) throws MinervaException {
-        if (numTasks >= MAX_TASKS) {
-            throw new MinervaException(ERROR_OVERFLOW);
+        tasks.add(t);
+        ui.printAddedMessage(t, tasks.size());
+    }
+
+    public void deleteTask(int currentTask) throws MinervaException {
+        if (currentTask < 0 || currentTask >= tasks.size()) {
+            throw new MinervaException(ERROR_NONEXISTENT_TASK);
         }
-        tasks[numTasks++] = t;
-        ui.printAddedMessage(t, numTasks);
+        Task t = tasks.remove(currentTask);
+        ui.printDeletedMessage(t, tasks.size());
     }
 
     public void markTask(int currentTask) throws MinervaException{
-        if (currentTask < 0 || currentTask >= numTasks) {
+        if (currentTask < 0 || currentTask >= tasks.size()) {
             throw new MinervaException(ERROR_NONEXISTENT_TASK);
         }
-        tasks[currentTask].markDone();
-        ui.printMarkedMessage(tasks[currentTask]);
+        tasks.get(currentTask).markDone();
+        ui.printMarkedMessage(tasks.get(currentTask));
     }
 
     public void unmarkTask(int currentTask) throws MinervaException {
-        if (currentTask < 0 || currentTask >= numTasks) {
+        if (currentTask < 0 || currentTask >= tasks.size()) {
             throw new MinervaException(ERROR_NONEXISTENT_TASK);
         }
-        tasks[currentTask].unmarkDone();
-        ui.printUnmarkedMessage(tasks[currentTask]);
+        tasks.get(currentTask).unmarkDone();
+        ui.printUnmarkedMessage(tasks.get(currentTask));
     }
 
-    public Task[] getTasks() {
-        return Arrays.copyOf(tasks, numTasks);
+    public ArrayList<Task> getTasks() {
+        return tasks;
     }
 }
