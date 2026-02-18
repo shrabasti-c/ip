@@ -17,4 +17,9 @@ deadline
 event
 deadline 3
 event 4
+list
+delete 2
+delete 1
+delete 3
+list
 bye
