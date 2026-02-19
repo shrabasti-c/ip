@@ -1,6 +1,6 @@
 package minerva.task;
 
-public class Task {
+public abstract class Task {
     protected String description;
     protected boolean isDone;
     protected final TaskType type;
@@ -8,6 +8,12 @@ public class Task {
     public Task(String description, TaskType type) {
         this.description = description;
         this.isDone = false;
+        this.type = type;
+    }
+
+    public Task(String description, boolean isDone, TaskType type) {
+        this.description = description;
+        this.isDone = isDone;
         this.type = type;
     }
 
@@ -31,4 +37,6 @@ public class Task {
     public void unmarkDone() {
         isDone = false;
     }
+
+    public abstract String toFileFormat();
 }
