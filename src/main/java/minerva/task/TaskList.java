@@ -46,4 +46,30 @@ public class TaskList {
     public ArrayList<Task> getTasks() {
         return tasks;
     }
+
+    public Task parseTaskFromFile(String line) {
+        String[] parts = line.split(" \\| ");
+
+        if (parts.length < 3) {
+            throw new IllegalArgumentException();
+        }
+        String type = parts[0];
+        boolean isDone = parts[1].equals("1");
+        String description = parts[2];
+
+        return switch (type) {
+            case "T" -> new Todo(description, isDone);
+            case "D" -> {
+                if (parts.length < 4) throw new IllegalArgumentException();
+                yield new Deadline(description, isDone, parts[3]);
+            }
+            case "E" -> {
+                if (parts.length < 4) throw new IllegalArgumentException();
+                String from = parts[3].substring(0, parts[3].indexOf("-"));
+                String to = parts[3].substring(parts[3].indexOf("-") + 1);
+                yield new Event(description, isDone, from, to);
+            }
+            default -> throw new IllegalArgumentException();
+        };
+    }
 }
