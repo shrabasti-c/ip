@@ -4,21 +4,46 @@ import minerva.data.exception.MinervaException;
 import minerva.ui.Ui;
 
 import java.util.ArrayList;
+
+/**
+ * Manages the collection of tasks in the Minerva application.
+ *
+ * <p>Handles adding, deleting, marking, unmarking, searching, and
+ * parsing tasks from a file format. Provides integration with the UI
+ * to display messages for task operations.</p>
+ */
 public class TaskList {
     private final Ui ui;
 
     private final ArrayList<Task> tasks = new ArrayList<>();
     public static final String ERROR_NONEXISTENT_TASK = "Perform action on existing task only.";
 
+    /**
+     * Constructs a TaskList with a reference to the UI.
+     *
+     * @param ui the {@link Ui} used to display task operation messages
+     */
     public TaskList(Ui ui) {
         this.ui = ui;
     }
 
+    /**
+     * Adds a task to the task list and prints a message via the UI.
+     *
+     * @param t the {@link Task} to add
+     * @throws MinervaException if the task cannot be added
+     */
     public void addTask(Task t) throws MinervaException {
         tasks.add(t);
         ui.printAddedMessage(t, tasks.size());
     }
 
+    /**
+     * Deletes a task at the specified index and prints a message via the UI.
+     *
+     * @param currentTask the zero-based index of the task to delete
+     * @throws MinervaException if the index is invalid
+     */
     public void deleteTask(int currentTask) throws MinervaException {
         if (currentTask < 0 || currentTask >= tasks.size()) {
             throw new MinervaException(ERROR_NONEXISTENT_TASK);
@@ -27,6 +52,12 @@ public class TaskList {
         ui.printDeletedMessage(t, tasks.size());
     }
 
+    /**
+     * Marks the task at the specified index as done and updates the UI.
+     *
+     * @param currentTask the zero-based index of the task to mark
+     * @throws MinervaException if the index is invalid
+     */
     public void markTask(int currentTask) throws MinervaException{
         if (currentTask < 0 || currentTask >= tasks.size()) {
             throw new MinervaException(ERROR_NONEXISTENT_TASK);
@@ -35,6 +66,12 @@ public class TaskList {
         ui.printMarkedMessage(tasks.get(currentTask));
     }
 
+    /**
+     * Marks the task at the specified index as not done and updates the UI.
+     *
+     * @param currentTask the zero-based index of the task to unmark
+     * @throws MinervaException if the index is invalid
+     */
     public void unmarkTask(int currentTask) throws MinervaException {
         if (currentTask < 0 || currentTask >= tasks.size()) {
             throw new MinervaException(ERROR_NONEXISTENT_TASK);
@@ -43,6 +80,14 @@ public class TaskList {
         ui.printUnmarkedMessage(tasks.get(currentTask));
     }
 
+
+    /**
+     * Searches for tasks containing the exact keyword in their description.
+     *
+     * @param task the keyword to search for
+     * @return a list of {@link Task} objects containing the keyword
+     * @throws MinervaException never thrown in current implementation
+     */
     public ArrayList<Task> findTask(String task) throws MinervaException {
         ArrayList<Task> matchingTasks = new ArrayList<>();
         for (Task t : tasks) {
@@ -57,10 +102,25 @@ public class TaskList {
         return matchingTasks;
     }
 
+    /**
+     * Returns the list of all tasks.
+     *
+     * @return an {@link ArrayList} of {@link Task} objects
+     */
     public ArrayList<Task> getTasks() {
         return tasks;
     }
 
+    /**
+     * Parses a single line from the storage file into a {@link Task} object.
+     *
+     * <p>Supports Todo, Deadline, and Event tasks. Throws
+     * {@link IllegalArgumentException} if the line format is invalid.</p>
+     *
+     * @param line a line from the storage file
+     * @return a {@link Task} represented by the line
+     * @throws IllegalArgumentException if the line format is invalid
+     */
     public Task parseTaskFromFile(String line) {
         String[] parts = line.split(" \\| ");
 
