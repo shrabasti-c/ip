@@ -23,7 +23,7 @@ public class DeleteTaskCommand extends Command {
     }
 
     /**
-     * Executes the delete task command on the given {@link TaskList} using the provided {@link Ui}.
+     * Executes the delete task command on the given {@link TaskList}.
      *
      * @param tasks the task list from which the task will be deleted
      * @param ui the user interface to display messages

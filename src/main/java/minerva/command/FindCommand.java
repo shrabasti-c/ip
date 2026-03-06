@@ -25,8 +25,6 @@ public class FindCommand extends Command {
 
     /**
      * Constructs a {@code FindCommand} with the specified search keyword.
-     *
-     * @param task the keyword to search for in task descriptions
      */
     @Override
     public void execute(TaskList tasks, Ui ui) throws MinervaException {

@@ -24,7 +24,7 @@ public class MarkTaskCommand extends Command {
     }
 
     /**
-     * Executes the mark task command on the given {@link TaskList} using the provided {@link Ui}.
+     * Executes the mark task command on the given {@link TaskList}.
      *
      * @param tasks the task list containing the task to mark
      * @param ui the user interface to display messages

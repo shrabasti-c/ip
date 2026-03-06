@@ -24,16 +24,14 @@ public abstract class Command {
     /**
      * Determines whether this command is an exit command.
      *
-     * @return {@code true} if the command type is {@link CommandType#EXIT}, otherwise {@code false}
+     * @return {@code true} if it is an exit command, otherwise {@code false}
      */
     public boolean isExitCommand() {
         return this.type == CommandType.EXIT;
     }
 
     /**
-     * Executes the command using the provided {@link TaskList} and {@link Ui}.
-     *
-     * <p>Subclasses must implement this method to define the command's behavior.</p>
+     * Executes the command using either the provided {@link TaskList} and {@link Ui}.
      *
      * @param tasks the {@link TaskList} to operate on
      * @param ui the {@link Ui} for displaying messages

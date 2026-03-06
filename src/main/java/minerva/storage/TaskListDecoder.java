@@ -11,8 +11,8 @@ import java.util.List;
  * Provides functionality to decode a list of strings from storage
  * into a {@link TaskList} object for the Minerva application.
  *
- * <p>This class reads each line, converts it to a {@link Task} using
- * {@link TaskList#parseTaskFromFile(String)}, and adds it to a TaskList.
+ * <p>This class reads each line, converts it to a {@link Task}, and adds it to a
+ * TaskList.
  * Corrupted lines are skipped with a message printed to the console.</p>
  */
 public class TaskListDecoder {

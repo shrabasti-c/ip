@@ -129,7 +129,7 @@ public class Parser {
      * the index to a zero-based index used internally.</p>
      *
      * @param command the command containing a task index
-     * @return the zero-based task index
+     * @return the task index
      * @throws MinervaException if the index is missing or not a valid number
      */
     private static int getCurrentTask(String command) throws MinervaException {

@@ -24,7 +24,7 @@ public class UnmarkTaskCommand extends Command {
     }
 
     /**
-     * Executes the unmark task command on the given {@link TaskList} using the provided {@link Ui}.
+     * Executes the unmark task command on the given {@link TaskList}.
      *
      * @param tasks the task list containing the task to unmark
      * @param ui the user interface to display messages
