@@ -33,7 +33,7 @@ public class TaskListDecoder {
         for (String line : lines) {
             try {
                 Task task = tasks.parseTaskFromFile(line);
-                tasks.addTask(task);
+                tasks.addTask(task,true);
             } catch (IllegalArgumentException e) {
                 System.out.println(ERROR_CORRUPTED_LINE + line);
             }

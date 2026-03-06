@@ -28,14 +28,17 @@ public class TaskList {
     }
 
     /**
-     * Adds a task to the task list and prints a message via the UI.
+     * Adds a task to the task list and prints a message via the UI, if it is not
+     * loaded from the existing file.
      *
-     * @param t the {@link Task} to add
+     * @param isFromFile {@code true} if the task is being loaded from a file; {@code false} if added by the user
      * @throws MinervaException if the task cannot be added
      */
-    public void addTask(Task t) throws MinervaException {
+    public void addTask(Task t, boolean isFromFile) throws MinervaException {
         tasks.add(t);
-        ui.printAddedMessage(t, tasks.size());
+        if (!isFromFile) {
+            ui.printAddedMessage(t, tasks.size());
+        }
     }
 
     /**

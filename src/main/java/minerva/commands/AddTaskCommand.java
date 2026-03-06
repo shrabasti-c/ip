@@ -33,6 +33,6 @@ public class AddTaskCommand extends Command {
      */
     @Override
     public void execute(TaskList tasks, Ui ui) throws MinervaException {
-        tasks.addTask(task);
+        tasks.addTask(task, false);
     }
 }
