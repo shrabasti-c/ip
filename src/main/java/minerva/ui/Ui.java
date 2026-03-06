@@ -24,6 +24,8 @@ public class Ui {
     private static final String MESSAGE_PENDING_TASKS = "\n\tNumber of pending tasks in list: ";
     private static final String MESSAGE_MARKED = "Congratulations!\n\tmarked done: ";
     private static final String MESSAGE_UNMARKED = "Task pending...!\n\tmarked undone: ";
+    private static final String MESSAGE_MATCHING_TASKS = "\n\tBehold! I have found matching tasks in your list\n\t";
+    private static final String MESSAGE_NO_MATCHING_TASKS = "Alas! I have found no matching tasks in your list";
     private static final String MESSAGE_ERROR =  "\n\tYou err in your ways! ";
 
     public Ui() {
@@ -58,13 +60,27 @@ public class Ui {
         printWithFormatting(MESSAGE_UNMARKED + task);
     }
 
-    public void printTaskList(ArrayList<Task> tasks) {
+    public void printTaskList(ArrayList<Task> tasks, boolean isFullList) {
+        StringBuilder taskList = extractTaskList(tasks);
+        if (!isFullList) {
+            if (taskList.isEmpty()) {
+                printWithFormatting(MESSAGE_NO_MATCHING_TASKS);
+            } else {
+                printWithFormatting(MESSAGE_MATCHING_TASKS + String.valueOf(taskList).trim());
+            }
+        } else {
+            printWithFormatting(String.valueOf(taskList).trim());
+        }
+    }
+
+    private static StringBuilder extractTaskList(ArrayList<Task> tasks) {
         StringBuilder taskList = new StringBuilder();
         for(int i = 0; i < tasks.size(); i++) {
             taskList.append("\t").append(i+1).append(". ").append(tasks.get(i)).append("\n");
         }
-        printWithFormatting(String.valueOf(taskList).trim());
+        return taskList;
     }
+
 
     public void printError(String message) {
         printWithFormatting(MESSAGE_ERROR + message);

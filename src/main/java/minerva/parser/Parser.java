@@ -16,6 +16,7 @@ public class Parser {
     private static final String EVENT = "event";
     private static final String DEADLINE = "deadline";
     private static final String DELETE = "delete";
+    private static final String FIND = "find";
 
     private static final char SEPARATOR = '/';
     private static final int TODO_START = 5;
@@ -50,6 +51,8 @@ public class Parser {
             return parseEventCommand(command);
         } else if (command.startsWith(DELETE)) {
             return deleteTaskCommand(command);
+        } else if (command.startsWith(FIND)) {
+            return parseFindCommand(command);
         } else {
             throw new MinervaException(ERROR_INVALID_INPUT);
         }
@@ -107,7 +110,6 @@ public class Parser {
         }
     }
 
-
     public Command parseEventCommand(String command) throws MinervaException {
         if (command.length() < EVENT_START) {
             throw new MinervaException(ERROR_INCOMPLETE_INPUT);
@@ -123,5 +125,17 @@ public class Parser {
             throw new MinervaException(ERROR_INVALID_INPUT_EVENT);
         }
     }
+
+    public Command parseFindCommand(String command) throws MinervaException {
+        if (!command.contains(" ")) {
+            throw new MinervaException(ERROR_INCOMPLETE_INPUT);
+        }
+        String task = command.substring(command.indexOf(" ")+ 1).trim();
+        if (task.isEmpty()) {
+            throw new MinervaException(ERROR_INCOMPLETE_INPUT);
+        }
+        return new FindCommand(task);
+    }
+
 }
 
