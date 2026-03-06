@@ -20,13 +20,10 @@ import java.util.ArrayList;
  * Handles input and output operations for the Minerva application.
  */
 public class Ui {
-    /** Scanner used to read user input from standard input. */
     private final Scanner in;
 
-    /** Decorative separator used for formatted console output. */
     private static final String LINE = "\n\t____________________________________________________________\n\t";
 
-    /** ASCII logo displayed in the greeting message. */
     private static final String LOGO = "\t  __  __ _                            \n" +
             "\t  |  \\/  (_)                           \n" +
             "\t  | \\  / |_ _ __   ___ _ ____   ____ _ \n" +
@@ -34,36 +31,16 @@ public class Ui {
             "\t  | |  | | | | | |  __/ |   \\ V / (_| |\n" +
             "\t  |_|  |_|_|_| |_|\\___|_|    \\_/ \\__,_|\n";
 
-    /** Greeting message shown when the program starts. */
     private static final String GREETING = "Greetings! I am\n"+ LOGO + "\n\tHow may I be of assistance?";
-
-    /** Farewell message shown when the program terminates. */
     private static final String GOODBYE = "Farewell, until our paths cross again!";
 
-    /** Message displayed when a task is added. */
     private static final String MESSAGE_ADDED = "Understood: I have added this task\n\t\t";
-
-    /** Message displayed when a task is deleted. */
     private static final String MESSAGE_DELETED = "Your folly is undone: I have deleted this task\n\t\t";
-
-    /** Message displaying the number of tasks remaining. */
     private static final String MESSAGE_PENDING_TASKS = "\n\tNumber of pending tasks in list: ";
-
-    /** Message displayed when a task is marked as completed. */
     private static final String MESSAGE_MARKED = "Congratulations!\n\tmarked done: ";
-
-    /** Message displayed when a task is marked as not completed. */
     private static final String MESSAGE_UNMARKED = "Task pending...!\n\tmarked undone: ";
-
-    /** Message displayed when matching tasks are found during a search. */
-    private static final String MESSAGE_MATCHING_TASKS =
-            "\n\tBehold! I have found matching tasks in your list\n\t";
-
-    /** Message displayed when no matching tasks are found. */
-    private static final String MESSAGE_NO_MATCHING_TASKS =
-            "Alas! I have found no matching tasks in your list";
-
-    /** Generic error message prefix. */
+    private static final String MESSAGE_MATCHING_TASKS = "\n\tBehold! I have found matching tasks in your list\n\t";
+    private static final String MESSAGE_NO_MATCHING_TASKS = "Alas! I have found no matching tasks in your list";
     private static final String MESSAGE_ERROR =  "\n\tYou err in your ways! ";
 
     /**
