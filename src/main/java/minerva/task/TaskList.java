@@ -43,6 +43,20 @@ public class TaskList {
         ui.printUnmarkedMessage(tasks.get(currentTask));
     }
 
+    public ArrayList<Task> findTask(String task) throws MinervaException {
+        ArrayList<Task> matchingTasks = new ArrayList<>();
+        for (Task t : tasks) {
+            String[] words = t.getDescription().split("\\s+");
+            for (String word : words) {
+                if (word.equals(task)) {
+                    matchingTasks.add(t);
+                    break;
+                }
+            }
+        }
+        return matchingTasks;
+    }
+
     public ArrayList<Task> getTasks() {
         return tasks;
     }
