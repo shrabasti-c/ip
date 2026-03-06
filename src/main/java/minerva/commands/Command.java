@@ -1,4 +1,4 @@
-package minerva.command;
+package minerva.commands;
 
 import minerva.data.exception.MinervaException;
 import minerva.task.TaskList;

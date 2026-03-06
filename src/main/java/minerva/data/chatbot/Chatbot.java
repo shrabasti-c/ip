@@ -1,6 +1,6 @@
 package minerva.data.chatbot;
 
-import minerva.command.Command;
+import minerva.commands.Command;
 import minerva.data.exception.MinervaException;
 import minerva.parser.Parser;
 import minerva.storage.StorageFile;

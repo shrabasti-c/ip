@@ -1,4 +1,4 @@
-package minerva.command;
+package minerva.commands;
 
 /**
  * Represents the types of commands available in the Minerva application.

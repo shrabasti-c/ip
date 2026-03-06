@@ -4,7 +4,7 @@
  *
  * <p>
  * The {@code Parser} interprets raw command strings entered by the user
- * and converts them into corresponding {@link minerva.command.Command}
+ * and converts them into corresponding {@link minerva.commands.Command}
  * objects. These command objects encapsulate the logic required to
  * perform actions such as adding tasks, marking tasks, deleting tasks,
  * and searching tasks.
@@ -18,7 +18,7 @@
 package minerva.parser;
 
 import minerva.data.exception.MinervaException;
-import minerva.command.*;
+import minerva.commands.*;
 import minerva.task.Deadline;
 import minerva.task.Event;
 import minerva.task.Task;
