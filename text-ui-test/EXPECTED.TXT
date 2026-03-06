@@ -1,32 +1,14 @@
 
 	____________________________________________________________
-	Greetings! I am
-	  __  __ _                            
-	  |  \/  (_)                           
-	  | \  / |_ _ __   ___ _ ____   ____ _ 
-	  | |\/| | | '_ \ / _ \ '__\ \ / / _` |
-	  | |  | | | | | |  __/ |   \ V / (_| |
-	  |_|  |_|_|_| |_|\___|_|    \_/ \__,_|
-
-	How may I be of assistance?
+	Understood: I have added this task
+		[D][ ] do homework (by: no idea :-p)
+	Number of pending tasks in list: 1
 	____________________________________________________________
 	
 
 	____________________________________________________________
 	Understood: I have added this task
 		[T][ ] borrow book
-	Number of pending tasks in list: 1
-	____________________________________________________________
-	
-
-	____________________________________________________________
-	1. [T][ ] borrow book
-	____________________________________________________________
-	
-
-	____________________________________________________________
-	Understood: I have added this task
-		[D][ ] return book (by: sunday)
 	Number of pending tasks in list: 2
 	____________________________________________________________
 	
@@ -46,26 +28,204 @@
 	
 
 	____________________________________________________________
+	Understood: I have added this task
+		[T][ ] borrow book
+	Number of pending tasks in list: 5
+	____________________________________________________________
+	
+
+	____________________________________________________________
+	Understood: I have added this task
+		[D][ ] return book (by: sunday)
+	Number of pending tasks in list: 6
+	____________________________________________________________
+	
+
+	____________________________________________________________
+	Understood: I have added this task
+		[E][ ] project meeting (from: mon 2pm to: 4pm)
+	Number of pending tasks in list: 7
+	____________________________________________________________
+	
+
+	____________________________________________________________
+	Understood: I have added this task
+		[D][ ] do homework (by: no idea :-p)
+	Number of pending tasks in list: 8
+	____________________________________________________________
+	
+
+	____________________________________________________________
+	Understood: I have added this task
+		[T][ ] borrow book
+	Number of pending tasks in list: 9
+	____________________________________________________________
+	
+
+	____________________________________________________________
+	Understood: I have added this task
+		[D][ ] return book (by: sunday)
+	Number of pending tasks in list: 10
+	____________________________________________________________
+	
+
+	____________________________________________________________
+	Understood: I have added this task
+		[E][ ] project meeting (from: mon 2pm to: 4pm)
+	Number of pending tasks in list: 11
+	____________________________________________________________
+	
+
+	____________________________________________________________
+	Understood: I have added this task
+		[D][ ] do homework (by: no idea :-p)
+	Number of pending tasks in list: 12
+	____________________________________________________________
+	
+
+	____________________________________________________________
+	Understood: I have added this task
+		[T][ ] borrow book
+	Number of pending tasks in list: 13
+	____________________________________________________________
+	
+
+	____________________________________________________________
+	Understood: I have added this task
+		[D][ ] return book (by: sunday)
+	Number of pending tasks in list: 14
+	____________________________________________________________
+	
+
+	____________________________________________________________
+	Understood: I have added this task
+		[E][ ] project meeting (from: mon 2pm to: 4pm)
+	Number of pending tasks in list: 15
+	____________________________________________________________
+	
+
+	____________________________________________________________
+	Understood: I have added this task
+		[D][ ] do homework (by: no idea :-p)
+	Number of pending tasks in list: 16
+	____________________________________________________________
+	
+
+	____________________________________________________________
+	Understood: I have added this task
+		[T][ ] borrow book
+	Number of pending tasks in list: 17
+	____________________________________________________________
+	
+
+	____________________________________________________________
+	Understood: I have added this task
+		[D][ ] return book (by: sunday)
+	Number of pending tasks in list: 18
+	____________________________________________________________
+	
+
+	____________________________________________________________
+	Understood: I have added this task
+		[E][ ] project meeting (from: mon 2pm to: 4pm)
+	Number of pending tasks in list: 19
+	____________________________________________________________
+	
+
+	____________________________________________________________
+	Understood: I have added this task
+		[D][ ] do homework (by: no idea :-p)
+	Number of pending tasks in list: 20
+	____________________________________________________________
+	
+
+	____________________________________________________________
+	Greetings! I am
+	  __  __ _                            
+	  |  \/  (_)                           
+	  | \  / |_ _ __   ___ _ ____   ____ _ 
+	  | |\/| | | '_ \ / _ \ '__\ \ / / _` |
+	  | |  | | | | | |  __/ |   \ V / (_| |
+	  |_|  |_|_|_| |_|\___|_|    \_/ \__,_|
+
+	How may I be of assistance?
+	____________________________________________________________
+	
+
+	____________________________________________________________
+	Understood: I have added this task
+		[T][ ] borrow book
+	Number of pending tasks in list: 21
+	____________________________________________________________
+	
+
+	____________________________________________________________
+	1. [D][ ] do homework (by: no idea :-p)
+	2. [T][ ] borrow book
+	3. [E][ ] project meeting (from: mon 2pm to: 4pm)
+	4. [D][ ] do homework (by: no idea :-p)
+	5. [T][ ] borrow book
+	6. [D][ ] return book (by: sunday)
+	7. [E][ ] project meeting (from: mon 2pm to: 4pm)
+	8. [D][ ] do homework (by: no idea :-p)
+	9. [T][ ] borrow book
+	10. [D][ ] return book (by: sunday)
+	11. [E][ ] project meeting (from: mon 2pm to: 4pm)
+	12. [D][ ] do homework (by: no idea :-p)
+	13. [T][ ] borrow book
+	14. [D][ ] return book (by: sunday)
+	15. [E][ ] project meeting (from: mon 2pm to: 4pm)
+	16. [D][ ] do homework (by: no idea :-p)
+	17. [T][ ] borrow book
+	18. [D][ ] return book (by: sunday)
+	19. [E][ ] project meeting (from: mon 2pm to: 4pm)
+	20. [D][ ] do homework (by: no idea :-p)
+	21. [T][ ] borrow book
+	____________________________________________________________
+	
+
+	____________________________________________________________
+	Understood: I have added this task
+		[D][ ] return book (by: sunday)
+	Number of pending tasks in list: 22
+	____________________________________________________________
+	
+
+	____________________________________________________________
+	Understood: I have added this task
+		[E][ ] project meeting (from: mon 2pm to: 4pm)
+	Number of pending tasks in list: 23
+	____________________________________________________________
+	
+
+	____________________________________________________________
+	Understood: I have added this task
+		[D][ ] do homework (by: no idea :-p)
+	Number of pending tasks in list: 24
+	____________________________________________________________
+	
+
+	____________________________________________________________
 	Congratulations!
-	marked done: [D][X] return book (by: sunday)
+	marked done: [T][X] borrow book
 	____________________________________________________________
 	
 
 	____________________________________________________________
 	Task pending...!
-	marked undone: [D][ ] return book (by: sunday)
+	marked undone: [T][ ] borrow book
 	____________________________________________________________
 	
 
 	____________________________________________________________
-	
-	You err in your ways! Perform action on existing task only.
+	Congratulations!
+	marked done: [T][X] borrow book
 	____________________________________________________________
 	
 
 	____________________________________________________________
-	
-	You err in your ways! Perform action on existing task only.
+	Task pending...!
+	marked undone: [T][ ] borrow book
 	____________________________________________________________
 	
 
@@ -130,36 +290,91 @@
 	
 
 	____________________________________________________________
-	1. [T][ ] borrow book
-	2. [D][ ] return book (by: sunday)
+	1. [D][ ] do homework (by: no idea :-p)
+	2. [T][ ] borrow book
 	3. [E][ ] project meeting (from: mon 2pm to: 4pm)
 	4. [D][ ] do homework (by: no idea :-p)
-	____________________________________________________________
-	
-
-	____________________________________________________________
-	Your folly is undone: I have deleted this task
-		[D][ ] return book (by: sunday)
-	Number of pending tasks in list: 3
+	5. [T][ ] borrow book
+	6. [D][ ] return book (by: sunday)
+	7. [E][ ] project meeting (from: mon 2pm to: 4pm)
+	8. [D][ ] do homework (by: no idea :-p)
+	9. [T][ ] borrow book
+	10. [D][ ] return book (by: sunday)
+	11. [E][ ] project meeting (from: mon 2pm to: 4pm)
+	12. [D][ ] do homework (by: no idea :-p)
+	13. [T][ ] borrow book
+	14. [D][ ] return book (by: sunday)
+	15. [E][ ] project meeting (from: mon 2pm to: 4pm)
+	16. [D][ ] do homework (by: no idea :-p)
+	17. [T][ ] borrow book
+	18. [D][ ] return book (by: sunday)
+	19. [E][ ] project meeting (from: mon 2pm to: 4pm)
+	20. [D][ ] do homework (by: no idea :-p)
+	21. [T][ ] borrow book
+	22. [D][ ] return book (by: sunday)
+	23. [E][ ] project meeting (from: mon 2pm to: 4pm)
+	24. [D][ ] do homework (by: no idea :-p)
 	____________________________________________________________
 	
 
 	____________________________________________________________
 	Your folly is undone: I have deleted this task
 		[T][ ] borrow book
-	Number of pending tasks in list: 2
+	Number of pending tasks in list: 23
 	____________________________________________________________
 	
 
 	____________________________________________________________
+	Your folly is undone: I have deleted this task
+		[D][ ] do homework (by: no idea :-p)
+	Number of pending tasks in list: 22
+	____________________________________________________________
 	
-	You err in your ways! Perform action on existing task only.
+
+	____________________________________________________________
+	Your folly is undone: I have deleted this task
+		[T][ ] borrow book
+	Number of pending tasks in list: 21
 	____________________________________________________________
 	
 
 	____________________________________________________________
 	1. [E][ ] project meeting (from: mon 2pm to: 4pm)
 	2. [D][ ] do homework (by: no idea :-p)
+	3. [D][ ] return book (by: sunday)
+	4. [E][ ] project meeting (from: mon 2pm to: 4pm)
+	5. [D][ ] do homework (by: no idea :-p)
+	6. [T][ ] borrow book
+	7. [D][ ] return book (by: sunday)
+	8. [E][ ] project meeting (from: mon 2pm to: 4pm)
+	9. [D][ ] do homework (by: no idea :-p)
+	10. [T][ ] borrow book
+	11. [D][ ] return book (by: sunday)
+	12. [E][ ] project meeting (from: mon 2pm to: 4pm)
+	13. [D][ ] do homework (by: no idea :-p)
+	14. [T][ ] borrow book
+	15. [D][ ] return book (by: sunday)
+	16. [E][ ] project meeting (from: mon 2pm to: 4pm)
+	17. [D][ ] do homework (by: no idea :-p)
+	18. [T][ ] borrow book
+	19. [D][ ] return book (by: sunday)
+	20. [E][ ] project meeting (from: mon 2pm to: 4pm)
+	21. [D][ ] do homework (by: no idea :-p)
+	____________________________________________________________
+	
+
+	____________________________________________________________
+	Alas! I have found no matching tasks in your list
+	____________________________________________________________
+	
+
+	____________________________________________________________
+	Alas! I have found no matching tasks in your list
+	____________________________________________________________
+	
+
+	____________________________________________________________
+	Alas! I have found no matching tasks in your list
 	____________________________________________________________
 	
 
