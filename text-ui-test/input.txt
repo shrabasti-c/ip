@@ -22,4 +22,7 @@ delete 2
 delete 1
 delete 3
 list
+find task
+find read
+find a
 bye
